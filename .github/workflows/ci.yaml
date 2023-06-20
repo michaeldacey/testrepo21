@@ -31,8 +31,8 @@ jobs:
       uses: azure/docker-login@v1
       with:
         login-server: 'mywebappacr19289.azurecr.io' # default: index.docker.io
-        username: 'secrets.AZURE_CLIENT_ID'
-        password: 'secrets.AZURE_CLIENT_SECRET'  # Can use password but better to use personal access token
+        username: secrets.AZURE_CLIENT_ID
+        password: secrets.AZURE_CLIENT_SECRET  # Can use password but better to use personal access token
     
     - name: Docker build and push image to registry tagged using Git commit id
       run: |
